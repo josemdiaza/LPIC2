@@ -1,0 +1,15 @@
+@	IN	SOA	ns.lpic2.lan.  root.lpic2.lan.  (
+			2020052001 ;    Serial
+			     86400 ;    Refresh
+			      7200 ;    Retry
+			    172800 ;    Expire
+			    172800 ; )  TTL
+
+@	IN	NS	dns.lpic2.lan.
+
+dns	IN	A	192.168.200.9
+debian	IN	A	192.168.200.9
+centos	IN	A	192.168.200.7
+
+ftp	IN	CNAME	centos
+www	IN	CNAME	debian
