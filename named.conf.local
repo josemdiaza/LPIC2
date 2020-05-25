@@ -1,0 +1,11 @@
+zone "lpic2.lan" {
+	type master;
+	file "/path/to/file";
+	allow-transfer { A.B.C.D; };
+};
+
+zone "xcampos.lan" {
+	type slave;
+	file "/path/to/file";
+	masters { A.B.C.D; };
+};
