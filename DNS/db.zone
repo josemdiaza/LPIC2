@@ -1,15 +1,16 @@
-@	IN	SOA	ns.lpic2.lan.  root.lpic2.lan.  (
+$TTL 180
+
+@	IN	SOA	ns.jdiaz.lan.  root.jdiaz.lan.  (
 			2020052001 ;    Serial
-			     86400 ;    Refresh
-			      7200 ;    Retry
-			    172800 ;    Expire
-			    172800 ; )  TTL
+			       120 ;    Refresh
+			        60 ;    Retry
+			       300 ;    Expire
+			     180 ) ;    TTL
 
-@	IN	NS	dns.lpic2.lan.
+ns      IN      A       10.0.6.1
 
-dns	IN	A	192.168.200.9
-debian	IN	A	192.168.200.9
-centos	IN	A	192.168.200.7
+@	IN	NS	ns.jdiaz.lan.
 
-ftp	IN	CNAME	centos
-www	IN	CNAME	debian
+centos	IN	A	172.16.17.60
+
+www	IN	CNAME	centos
